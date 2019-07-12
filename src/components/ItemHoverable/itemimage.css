@@ -1,0 +1,16 @@
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.tooltip-row {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray; 
+}
+
+.tooltip-row > * {
+  margin-left:5px;
+}
