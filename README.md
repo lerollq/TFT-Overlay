@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## TFT Overlay by LaSmala
 
 ![Preview](gif.gif)
 
+# How to use
+1- [Download executable here](https://github.com/lerollq/TFT-Overlay/releases)
+2 Run the .exe and enjoy
