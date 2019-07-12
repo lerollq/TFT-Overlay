@@ -28,7 +28,7 @@ export default ({view, setView, closeApp}:SidebarProps) => {
         </a>
       </ClickableElement>
 
-      
+      <hr className="separator"/>
       <ClickableElement>
         <a id="btn-items2" className="btn" onClick={() => closeApp()} title="Close">
           <i className="far fa-times-circle"/>
