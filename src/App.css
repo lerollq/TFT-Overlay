@@ -12,3 +12,7 @@ html, body  {
   background-color: rgba(0, 0, 0, 0.486);
 }
 
+.clickableElement > * {
+  cursor: pointer;
+}
+

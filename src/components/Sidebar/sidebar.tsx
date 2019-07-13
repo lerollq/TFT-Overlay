@@ -28,6 +28,12 @@ export default ({view, setView, closeApp}:SidebarProps) => {
         </a>
       </ClickableElement>
 
+      <ClickableElement>
+        <a id="btn-items" className="btn" onClick={() => setView(Views.SETTINGS)} title="Settings">
+          <i className="fas fa-cogs" />
+        </a>
+      </ClickableElement>
+
       <hr className="separator"/>
       <ClickableElement>
         <a id="btn-items2" className="btn" onClick={() => closeApp()} title="Close">

@@ -25,6 +25,14 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
     }
   }
 
+  resetStack = () => {
+    Object.keys(this.state).forEach((key, idx) => {
+      this.setState({
+        [key]:0
+      })
+    })
+  }
+
   updateLocalstorage = () => {
     localStorage.setItem("stack", JSON.stringify(this.state));
   }
@@ -49,7 +57,7 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
   render() {
     return (
       <div style={{display:"flex"}}>
-        <Stack decrementItem={this.decrementItem} incrementItem={this.incrementItem} stack={this.state}/>
+        <Stack decrementItem={this.decrementItem} incrementItem={this.incrementItem} stack={this.state} resetStack={this.resetStack}/>
         <ListAvailableItems stack={this.state}/>
       </div>
     )  

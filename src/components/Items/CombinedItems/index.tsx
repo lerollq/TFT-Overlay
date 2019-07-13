@@ -16,9 +16,9 @@ const CombinedItems = ({baseName, combinedItems}:CombinedItemsProps) => {
       <table>
         <thead>
           <tr>
-            <td>Recipe</td>
+            <td><h2>Recipe</h2></td>
             <td></td>
-            <td>Combined Into</td>
+            <td><h2>Combined Into</h2></td>
           </tr>
         </thead>
         <tbody>

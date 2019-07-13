@@ -29,6 +29,7 @@
     "@types/react-redux": "^7.1.1",
     "@types/react-tooltip": "^3.9.3",
     "electron-is-dev": "^1.1.0",
+    "electron-store": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
@@ -47,7 +48,6 @@
     "pack": "electron-builder --dir",
     "dist": "yarn build && electron-builder build --win --x64",
     "eject": "react-scripts eject",
-    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='Electron Tutorial App'",
     "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
@@ -69,7 +69,6 @@
     "concurrently": "^4.1.1",
     "electron": "^5.0.6",
     "electron-builder": "^20.44.4",
-    "electron-packager": "^14.0.1",
     "typescript": "^3.5.3",
     "wait-on": "^3.2.0"
   }

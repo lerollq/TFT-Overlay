@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+h2 {
+  margin-top:0;
+}
+
 
 .available-item-builder-container {
   display: flex;
@@ -30,9 +34,6 @@ code {
   margin-right: 20px;
 }
 
-.stack-container > h2 {
-  margin-top:0;
-}
 
 .stack-item-builder-container {
   display: flex;

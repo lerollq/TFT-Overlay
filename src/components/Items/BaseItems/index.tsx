@@ -16,7 +16,7 @@ const BaseItems = ({items, setItemOnClick}:BaseItemsProps) => {
       <table>
         <thead>
           <tr>
-            <td>Base Items</td>
+            <td><h2>Base Items </h2></td>
           </tr>
         </thead>
         <tbody>

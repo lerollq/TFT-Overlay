@@ -20,12 +20,14 @@ class App extends React.Component<AppProps>  {
 
   componentDidMount() {
     this.props.fetchData();
-    ipcRenderer.on('onblur', () => console.log('ITSOKAY'))   
   }
 
   onMouseLeave = () => {
+    const autoHide = JSON.parse(ipcRenderer.sendSync("getAutoHide"))
     ipcRenderer.send('onMouseLeave');
-    this.props.closeView();
+    if (autoHide) {
+      this.props.closeView();  
+    }
   }
 
   onMouseEnter = () => {

@@ -6,7 +6,6 @@ const initialState: OverallState = {
 }
 
 export function overallReducer(state = initialState, actions:OverallActionsType):OverallState {
-  console.log("==>", actions.type);
   switch(actions.type) {
     case SET_VIEW:
       return {

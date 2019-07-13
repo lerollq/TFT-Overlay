@@ -5,7 +5,8 @@ export enum State {
 
 export enum Views {
   ITEMS = "ITEMS",
-  ITEM_BUILDER = "ITEM_BUILDER"
+  ITEM_BUILDER = "ITEM_BUILDER",
+  SETTINGS = "SETTINGS",
 }
 
 export interface OverallState {

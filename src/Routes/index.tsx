@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 
 import Items from "../components/Items";
 import ItemBuilder from "../components/ItemBuilder";
-import { Views } from '../store/Overall/types';
+import Settings from "../components/Settings";
+
+ import { Views } from '../store/Overall/types';
 
 type RoutesProps = {
   view: Views | null
@@ -15,6 +17,8 @@ const Routes =  ({view}: RoutesProps) => {
       return <Items/>;
     case Views.ITEM_BUILDER:
       return <ItemBuilder />
+    case Views.SETTINGS:
+      return <Settings />
     default:
       return null;
   }

@@ -26,7 +26,7 @@ class ClickableElement extends Component {
 
   render() {
     return  (
-      <div id={this.state.id}>
+      <div id={this.state.id} className="clickableElement">
           {this.props.children}
       </div>
     )

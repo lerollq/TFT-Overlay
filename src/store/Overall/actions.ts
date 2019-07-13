@@ -8,7 +8,6 @@ import { SET_VIEW, State, SET_STATE, OverallActionsType, Views, CLOSE_VIEW } fro
 const { remote, ipcRenderer } = window.require("electron");
 
 export const fetchData = (): ThunkAction<void, AppState, null, Action<string>> => async dispatch => {
-  console.log("FETCHDATA")
   return Promise.all([
     dispatch(fetchItems()),
     dispatch(fetchIcons()),
