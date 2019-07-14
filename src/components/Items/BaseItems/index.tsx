@@ -3,7 +3,6 @@ import { Item } from "../../../store/Items/types";
 import { getBaseItems } from "../../../store/Items/selectors";
 import { AppState } from "../../../store";
 import { connect } from "react-redux";
-import ClickableElement from "../../ClickableElement";
 import ItemHoverable from "../../ItemHoverable";
 
 type BaseItemsProps = {

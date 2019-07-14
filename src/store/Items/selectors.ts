@@ -1,6 +1,5 @@
 import { createSelector } from "reselect";
-import { AppState } from "..";
-import { ItemsState, Item } from "./types";
+import { ItemsState } from "./types";
 
 export const getBaseItems = createSelector(
   (state:ItemsState) => state.items,
@@ -55,7 +54,7 @@ export const getCombinedItemsFromCurrentStack = (state:ItemsState, stack:ItemBui
   combinedItems.forEach(combinedItem => {
     const countItem:any = {};
 
-    combinedItem.recipe && combinedItem.recipe.map((key, idx) => {
+    combinedItem.recipe && combinedItem.recipe.forEach((key, idx) => {
       countItem[key] = Object.keys(countItem).includes(key) ? countItem[key] += 1: 1;
     });
 

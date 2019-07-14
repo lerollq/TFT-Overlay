@@ -16,29 +16,35 @@ export default ({view, setView, closeApp}:SidebarProps) => {
     <div className="sidebar">
 
       <ClickableElement>
-        <a id="btn-items" className="btn" onClick={() => setView(Views.ITEMS)} title="Items">
+        <span id="btn-items" className="btn" onClick={() => setView(Views.ITEMS)} title="Items">
           <i className="fas fa-tools" />
-        </a>
+        </span>
       </ClickableElement>
 
 
       <ClickableElement>
-        <a id="btn-items" className="btn" onClick={() => setView(Views.ITEM_BUILDER)} title="Item Builder">
+        <span id="btn-items" className="btn" onClick={() => setView(Views.ITEM_BUILDER)} title="Item Builder">
           <i className="fas fa-hammer" />
-        </a>
+        </span>
       </ClickableElement>
 
       <ClickableElement>
-        <a id="btn-items" className="btn" onClick={() => setView(Views.SETTINGS)} title="Settings">
+        <span id="btn-items" className="btn" onClick={() => setView(Views.SETTINGS)} title="Settings">
           <i className="fas fa-cogs" />
-        </a>
+        </span>
       </ClickableElement>
 
       <hr className="separator"/>
       <ClickableElement>
-        <a id="btn-items2" className="btn" onClick={() => closeApp()} title="Close">
+        <span id="btn-items" className="btn" onClick={() => setView(Views.INFO)} title="Info">
+          <i className="fas fa-info-circle" />
+        </span>
+      </ClickableElement>
+
+      <ClickableElement>
+        <span id="btn-items2" className="btn" onClick={() => closeApp()} title="Close">
           <i className="far fa-times-circle"/>
-        </a>
+        </span>
       </ClickableElement>
     </div>
   )

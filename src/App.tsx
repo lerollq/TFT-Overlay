@@ -1,13 +1,11 @@
 import React from 'react';
-import { connect, DispatchProp } from 'react-redux';
+import { connect } from 'react-redux';
 import { fetchData, closeView } from "./store/Overall/actions";
 import { State } from "./store/Overall/types";
 import { AppState } from './store';
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Routes from "./Routes";
-import { ThunkDispatch } from 'redux-thunk';
-import { AnyAction } from 'redux';
 const { ipcRenderer } = window.require('electron');
 
 interface AppProps {

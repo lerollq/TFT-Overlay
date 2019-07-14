@@ -7,8 +7,6 @@ const isDev = require('electron-is-dev');
 const Store = require('./store.js');
 let mainWindow;
 
-
-
 // const store = new Store({
 //   configName: 'user-preferences',
 //   defaults: {
@@ -68,6 +66,12 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+app.on("browser-window-blur", () => {
+  if (mainWindow) {
+    mainWindow.setIgnoreMouseEvents(true, {forward: true});
+  }
+})
 
 
 ipcMain.on('set-ignore-mouse-events', function (ev, args, args2) {

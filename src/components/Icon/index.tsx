@@ -9,7 +9,7 @@ type IconProps = {
   size?:number,
 }
 
-const Icon = ({imgSrc ="", size=16}:IconProps) => <img src={imgSrc} width={size} height={size}/>
+const Icon = ({imgSrc ="", size=16, baseName}:IconProps) => <img src={imgSrc} width={size} height={size} alt={baseName}/>
 
 const mapStateToProps = (state:AppState, ownProps:IconProps) => {
   return {

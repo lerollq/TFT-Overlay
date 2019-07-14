@@ -1,9 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import { AppState } from '../../store';
 import { getBaseItems } from '../../store/Items/selectors';
-import { Item } from '../../store/Items/types';
-import ItemHoverable from '../ItemHoverable';
 import ListAvailableItems from './ListAvailableItems';
 import Stack from './Stack';
 
@@ -18,7 +16,7 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
       this.setState(JSON.parse(localStacks));
     } else {
       let items:ItemBuilderState = {};
-      this.props.baseItems.map((item, idx) =>  {
+      this.props.baseItems.forEach((item, idx) =>  {
         items[item.name] = 0;
       });
       this.setState(items);  
@@ -39,18 +37,22 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
 
   incrementItem = (baseName:string):void => {
     if (Object.keys(this.state).includes(baseName)) {
+
       this.setState({
         [baseName]: this.state[baseName] += 1,
-      }, () => this.updateLocalstorage())  
+      }, () => this.updateLocalstorage());
+
     }
   }
 
   decrementItem = (baseName:string) => {
     if (Object.keys(this.state).includes(baseName) && this.state[baseName] >= 1) {
+
       let newValue = this.state[baseName] -= 1;
       this.setState({
         [baseName]: newValue,
-      }, () => this.updateLocalstorage())  
+      }, () => this.updateLocalstorage());
+
     }
   }
 

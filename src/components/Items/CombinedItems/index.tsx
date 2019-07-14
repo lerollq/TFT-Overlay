@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { getCombinedItemsInto, getImageFromItemName } from "../../../store/Items/selectors";
+import { getCombinedItemsInto } from "../../../store/Items/selectors";
 import { AppState } from '../../../store';
 import { Item } from '../../../store/Items/types';
 import ItemHoverable from "../../ItemHoverable";

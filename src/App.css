@@ -16,3 +16,26 @@ html, body  {
   cursor: pointer;
 }
 
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-container span {
+  font-weight: 800;
+}
+
+.info-container span.link::before {
+  content:"🔗",
+}
+
+.info-container  span.link {
+  color: rgb(25, 25, 255);
+  text-decoration-line: underline;
+}
+
+.info-container > .separator {
+  width: 80%;
+}
+
