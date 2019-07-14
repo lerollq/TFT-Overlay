@@ -7,17 +7,8 @@ const isDev = require('electron-is-dev');
 const Store = require('./store.js');
 let mainWindow;
 
-// const store = new Store({
-//   configName: 'user-preferences',
-//   defaults: {
-//     focusOpacity:0.1,
-//     bluropacity:0.3,
-//     windowBounds: { width: 800, height: 600 }
-//   }
-// });
 
 const store = new Store({
-  // We'll call our data file 'user-preferences'
   configName: 'userpreferences',
   defaults: {
     blurOpacity:0.4,
@@ -25,9 +16,6 @@ const store = new Store({
     autoHide:true,
   }
 });
-
-// store.set('background', "#f54489");
-// store.set('bluropacity', 0.2)
 
 function createWindow() {
   const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;

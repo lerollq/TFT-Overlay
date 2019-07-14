@@ -2,9 +2,6 @@ import React from 'react';
 import BaseItems from "./BaseItems";
 import CombinedItems from "./CombinedItems";
 
-import './items.css';
-
-
 class Items extends React.PureComponent {
 
   state = {

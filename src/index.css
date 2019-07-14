@@ -16,6 +16,7 @@ h2 {
   margin-top:0;
 }
 
+/**Item Builder View**/
 
 .available-item-builder-container {
   display: flex;
@@ -45,4 +46,69 @@ h2 {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+}
+
+
+/**Items View**/
+
+.items-container {
+  display: flex;
+}
+
+.base-item,
+.combined-items-recipe,
+.combined-items-into {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+table {
+  text-align: left;
+}
+
+/**Sidebar Component**/
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin-right: 20px;
+  /* padding: 0.4em; */
+}
+
+.sidebar .separator {
+  width: 80%;
+}
+
+.btn {
+  cursor: pointer;
+  margin:0.2em;
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  color: rgba(180, 5, 136, 0.747);
+}
+
+/** Item Hoverable Component**/
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.tooltip-row {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray; 
+}
+
+.tooltip-row > * {
+  margin-left:5px;
 }

@@ -5,7 +5,6 @@ import { AppState } from '../../store';
 import ClickableElement from '../ClickableElement';
 import ReactTooltip from 'react-tooltip';
 import Icon from '../Icon';
-import "./itemimage.css";
 import ItemImage from '../ItemImage';
 
 type ItemHoverableProps = {

@@ -2,10 +2,10 @@ import React from 'react';
 import { AppState } from '../store';
 import { connect } from 'react-redux';
 
-import Items from "../components/Items";
-import ItemBuilder from "../components/ItemBuilder";
-import Settings from "../components/Settings";
-import Info from "../components/Info";
+import Items from "../components/_ItemsView";
+import ItemBuilder from "../components/_ItemBuilderView";
+import Settings from "../components/_SettingsView";
+import Info from "../components/_InfoView";
 
 import { Views } from '../store/Overall/types';
 

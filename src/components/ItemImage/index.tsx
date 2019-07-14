@@ -11,7 +11,7 @@ type ItemImageProps = {
 
 const ItemImage = ({imgSrc="", baseName="", size=30}:ItemImageProps) => {
   return (
-    <img src={imgSrc} title={baseName} width={size} height={size}/>
+    <img src={imgSrc} title={baseName} width={size} height={size} alt={baseName}/>
   )
 }
 

@@ -16,7 +16,7 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
       this.setState(JSON.parse(localStacks));
     } else {
       let items:ItemBuilderState = {};
-      this.props.baseItems.forEach((item, idx) =>  {
+      this.props.baseItems.forEach((item) =>  {
         items[item.name] = 0;
       });
       this.setState(items);  
@@ -24,7 +24,7 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
   }
 
   resetStack = () => {
-    Object.keys(this.state).forEach((key, idx) => {
+    Object.keys(this.state).forEach((key) => {
       this.setState({
         [key]:0
       })
@@ -37,9 +37,8 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
 
   incrementItem = (baseName:string):void => {
     if (Object.keys(this.state).includes(baseName)) {
-
       this.setState({
-        [baseName]: this.state[baseName] += 1,
+        [baseName]: this.state[baseName] + 1,
       }, () => this.updateLocalstorage());
 
     }
@@ -47,10 +46,8 @@ class ItemBuilder extends React.Component<ItemBuilderProps> {
 
   decrementItem = (baseName:string) => {
     if (Object.keys(this.state).includes(baseName) && this.state[baseName] >= 1) {
-
-      let newValue = this.state[baseName] -= 1;
       this.setState({
-        [baseName]: newValue,
+        [baseName]: this.state[baseName] - 1,
       }, () => this.updateLocalstorage());
 
     }

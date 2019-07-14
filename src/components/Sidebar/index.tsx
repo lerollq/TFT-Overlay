@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from "react-redux";
+
 import { setView, closeApp, setIgnoreMouseEvent } from '../../store/Overall/actions';
 import { Views } from '../../store/Overall/types';
 import ClickableElement from "../ClickableElement";
-import "./sidebar.css";
+import { AppState } from "../../store";
 
 type SidebarProps = {
   view: Views | null,
@@ -11,7 +13,7 @@ type SidebarProps = {
   setIgnoreMouseEvent: typeof setIgnoreMouseEvent
 }
 
-export default ({view, setView, closeApp}:SidebarProps) => {
+const Sidebar = ({view, setView, closeApp}:SidebarProps) => {
   return (
     <div className="sidebar">
 
@@ -49,3 +51,11 @@ export default ({view, setView, closeApp}:SidebarProps) => {
     </div>
   )
 }
+
+const mapStateToProps = (state:AppState) => {
+  return {
+    view: state.overall.view,
+  }
+}
+
+export default connect(mapStateToProps, {setView, closeApp, setIgnoreMouseEvent})(Sidebar);
