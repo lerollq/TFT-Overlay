@@ -1,3 +1,6 @@
+| WARNING: This project is and will not be maintain anymore |
+| --- |
+
 ## TFT Overlay by LaSmala
 
 ![Preview](gif.gif)
