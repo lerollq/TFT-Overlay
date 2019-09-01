@@ -1,4 +1,4 @@
-| WARNING: This project is and will not be maintain anymore |
+| WARNING: This project is and will not be maintained |
 | --- |
 
 ## TFT Overlay by LaSmala
